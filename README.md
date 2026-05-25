@@ -1,5 +1,9 @@
 # NeoMundi Data Protection
 
+**Languages:** [English](./README.md) | [Français](./README_FR.md)
+
+# NeoMundi Data Protection
+
 Privacy architecture, data minimization and processing modes for the NeoMundi runtime measurement instrument.
 
 NeoMundi is designed to measure generative AI systems at runtime while minimizing exposure to client content.

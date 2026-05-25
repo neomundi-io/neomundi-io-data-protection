@@ -1,3 +1,7 @@
+# NeoMundi Data Protection
+
+**Languages:** [English](./README.md) | [Français](./README_FR.md)
+
 # Protection des données NeoMundi
 
 Architecture de protection des données, minimisation des données et modes de traitement de l’instrument de mesure runtime NeoMundi.

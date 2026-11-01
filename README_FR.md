@@ -45,6 +45,47 @@ autorisés avant tout partage de dossiers pilotes.
 Cette page décrit des frontières techniques ; ce n'est ni un DPA, ni un contrat
 juridique, ni une certification.
 
+## Constats complémentaires — 1er novembre 2026
+
+Ces précisions proviennent des audits de déploiement MCP et de l'API communiqués lors de la qualification du plugin. Elles décrivent **le périmètre examiné**, pas une garantie universelle pour toute installation NeoMundi.
+
+### Connecteur MCP hébergé
+
+- Le service `mcp.neomundi.org` est annoncé déployé en version connecteur `0.3.0-rc.1` sur un VPS Infomaniak, avec point d'entrée HTTPS et transport MCP Streamable HTTP. Cette version **ne doit pas être confondue** avec la version de mesure renvoyée par l'API (notamment `3.3.1` dans l'observation examinée).
+- En mode mesure, le connecteur transmet les données nécessaires à l'API de mesure : le texte soumis peut inclure prompt, réponse et autres éléments d'exécution. Le connecteur restitue l'enveloppe de résultat ; il ne calcule pas lui-même les scores.
+- Une réponse peut comporter des signaux mesurés, des champs non publiés, des éléments textuels comme `suspect_phrases`, un état de mesure, un verdict technique et des informations de provenance. **Un champ non publié n'est pas nécessairement non mesuré** ; inversement, l'absence de mesure ne doit jamais devenir une valeur favorable par défaut.
+- Les verdicts `ALLOW`, `FLAG` et `BLOCK`, lorsqu'ils sont présents, ne constituent ni certification, ni preuve de vérité, ni autorisation générale d'exécuter une action. La comparabilité des résultats dépend des versions et des changements précisément documentés.
+
+### Journalisation et conservation : périmètres distincts
+
+Les audits transmis font état des constats suivants, qui ne sont **pas** des engagements de conservation généralisables :
+
+| Périmètre examiné | Observation rapportée | Limite |
+|---|---|---|
+| Connecteur MCP | Aucune conservation applicative de prompt ou réponse identifiée dans le connecteur audité | Ne préjuge ni de l'API, ni du client, ni du fournisseur d'IA |
+| Journaux d'accès nginx de l'API | IP et User-Agent présents ; durée rapportée de **14 jours** | Dépend de la configuration effective du service |
+| Journaux de conteneurs / journald de l'API | Aucune rotation configurée dans le périmètre examiné | Aucune durée maximale démontrée |
+| Journaux de l'API examinés | Aucun prompt ni réponse retrouvé dans l'échantillon de **5 000 lignes** | Un échantillon négatif ne prouve pas l'absence de tout stockage |
+| Base de mesures et sauvegardes | Règles de conservation non complètement établies | Aucune durée ni suppression automatique ne doit être présumée |
+
+Les journaux techniques, les métriques, le texte d'analyse et les preuves de provenance sont **des catégories différentes**. La durée de 14 jours ci-dessus ne s'applique **pas** à toutes les observations scientifiques ou aux comptes pilotes.
+
+### Évaluateurs et prestataires
+
+Sur le déploiement de mesure audité, trois des cinq signaux examinés utilisent des évaluateurs locaux ; un parcours de factualité utilise un service d'inférence Infomaniak. Il ne faut pas déduire la destination effective des données du seul nom d'un champ, de la présence d'une clé ou d'un format d'API compatible OpenAI. La présence du nom `cohere` dans un champ n'établit pas à elle seule un appel à Cohere.
+
+L'hébergement examiné est situé en Suisse chez Infomaniak. Les conditions contractuelles, les éventuels sous-traitants et la conservation par les services d'inférence doivent être vérifiés pour le **service et le compte concernés**. Une demande de rectification des coordonnées de l'entité contractante Infomaniak est en cours au 1er novembre 2026.
+
+### Responsabilités et documents
+
+L'association NeoMundi Recherche porte la phase pilote du connecteur. Les responsabilités de traitement des données personnelles doivent être qualifiées **par opération et par finalité** ; un pilote peut être responsable de certains traitements, et NeoMundi de ses traitements propres, selon les faits. Un NDA ou des CGU n'écartent pas les obligations d'information RGPD.
+
+- [Mentions légales](https://neomundi.org/mentions-legales)
+- [Politique de confidentialité du site](https://neomundi.org/politique-de-confidentialite) — son extension explicite au MCP est en cours
+- [CGU FR](https://neomundi.org/cgu) et [EN](https://neomundi.org/en/terms-of-use) — vérifier leur statut de publication et la version applicable avant de les invoquer
+
+Les conventions pilotes, DPA, licences d'exploitation et pièces associatives ne sont **pas** publiés dans ce dépôt. Les informations ci-dessus ne constituent ni un avis juridique, ni une certification de conformité, ni une promesse d'absence de données personnelles.
+
 ## Sources et état de la revue
 Revue documentaire du 25 octobre 2026. Aucun nouveau trafic de production capturé
 pour cette page ; politiques de conservation des évaluateurs non auditées indépendamment.

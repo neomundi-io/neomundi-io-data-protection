@@ -44,6 +44,47 @@ authorized access before sharing pilot records.
 
 This page documents technical boundaries; it is not a DPA, legal contract or certification.
 
+## Additional findings — 1 November 2026
+
+These clarifications reflect MCP deployment and measurement API audits reported during plugin qualification. They describe **the examined deployment**, not universal guarantees for every NeoMundi installation.
+
+### Hosted MCP connector
+
+- The `mcp.neomundi.org` service was reported deployed as connector version `0.3.0-rc.1` on an Infomaniak VPS, using HTTPS and MCP Streamable HTTP. This connector version is **not** the measurement version returned by the API (including `3.3.1` in the examined observation).
+- For measurement requests, the connector forwards the necessary data to the measurement API. Submitted content can include prompts, responses and other execution material. The connector returns the resulting envelope; it does not compute the scores itself.
+- Results may include measured signals, unpublished fields, textual elements such as `suspect_phrases`, measurement state, technical verdict and provenance. **Unpublished does not necessarily mean unmeasured**; equally, missing measurements must not be converted into favorable defaults.
+- `ALLOW`, `FLAG` and `BLOCK` verdicts, when present, are not certifications, proofs of truth or general permissions to execute an action. Comparability depends on precisely documented versions and changes.
+
+### Logging and retention: different boundaries
+
+The reported audits provide the following **scoped observations**, not retention promises:
+
+| Examined scope | Reported observation | Limitation |
+|---|---|---|
+| MCP connector | No application-side retention of prompts or responses identified in the audited connector | Says nothing about the API, client or AI provider |
+| API nginx access logs | IP and User-Agent recorded; **14-day** retention reported | Depends on the deployed configuration |
+| API container / journald logs | No rotation configured in the examined scope | No maximum retention established |
+| Sample of API logs | No prompt or response found in **5,000 examined lines** | Negative sampling does not prove absence from all storage |
+| Measurement database and backups | Retention rules not fully established | No automatic deletion interval should be assumed |
+
+Technical logs, metrics, analyzed text and provenance evidence are **distinct categories**. The 14-day period above does **not** apply to all scientific observations or pilot accounts.
+
+### Evaluators and providers
+
+In the audited measurement deployment, three of the five examined signals used local evaluators, while a factuality path used an Infomaniak inference service. Actual destinations must not be inferred from a field name, presence of a key or OpenAI-compatible API format. A field containing `cohere` alone does not prove that Cohere was called.
+
+The examined hosting was in Switzerland with Infomaniak. Provider retention, subprocessors and contractual terms still require confirmation for the **relevant service and contracting account**. A request to correct the Infomaniak contracting entity's details was pending as of 1 November 2026.
+
+### Roles and public documents
+
+NeoMundi Recherche, a French nonprofit association, sponsors the connector's pilot phase. Personal-data roles must be assessed **per processing activity and purpose**: a pilot may determine the purposes of some processing, while NeoMundi determines its own processing purposes, depending on the facts. An NDA or terms of use do not displace GDPR information obligations.
+
+- [Legal notice](https://neomundi.org/mentions-legales)
+- [Website privacy policy](https://neomundi.org/politique-de-confidentialite) — explicit MCP coverage is being prepared
+- [French terms](https://neomundi.org/cgu) and [English terms](https://neomundi.org/en/terms-of-use) — confirm publication status and applicable version before relying on them
+
+Pilot agreements, DPAs, operating licences and association records are **not** published in this repository. This technical explanation is not legal advice, a compliance certification or a guarantee that no personal data are processed.
+
 ## Sources and status
 Documentary review dated 25 October 2026; no new production traffic was captured
 for this page and evaluator retention policies were not independently audited.

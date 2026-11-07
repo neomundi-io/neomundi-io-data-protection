@@ -1,8 +1,43 @@
-# Data and confidentiality
-[English](README.md) · [Français](README_FR.md)
+<div align="center">
 
-NeoMundi has several data flows. A statement about an export does not describe
-everything processed by the measurement API or recorded by Station.
+<sub><b>English</b> · <a href="README_FR.md">Français</a></sub>
+
+# NeoMundi — Data & Confidentiality
+
+### Understand data flows before integrating AI.
+
+**Which content moves, where measurements run, and what gets recorded or exported: the documented boundaries of the NeoMundi infrastructure.**
+
+**Measurement → Station → Evidence**
+
+[![Measurement](https://img.shields.io/badge/Measurement-Measure-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement)
+[![Station](https://img.shields.io/badge/Station-Observe-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public)
+[![Evidence](https://img.shields.io/badge/Evidence-Verify-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-public)
+[![Use cases](https://img.shields.io/badge/Use_cases-Explore-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases)
+
+**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Create an account](https://controltower.neomundi.io/welcome)**
+
+</div>
+
+---
+
+## One principle: describe each flow, not a blanket promise
+
+NeoMundi distinguishes **transmission**, **processing**, **retention** and **export**. Content absent from an export may still have been transmitted, processed or stored on another path. This page makes no platform-wide promise of zero transmission, zero storage or zero retention.
+
+| Component | Boundary to examine |
+|---|---|
+| **Measurement / API** | Prompts and responses may be submitted depending on the request; enabled evaluators may receive content for selected measurements. |
+| **Station** | The internal ledger and read-only interface expose different data. A restricted interface does not establish absence of content in the ledger. |
+| **Evidence** | Integrity verification, attestations and traceability do not themselves establish confidentiality or retention guarantees. Exported artefact contents require separate scrutiny. |
+
+**Before integration:** confirm actual payloads, destinations, evaluators, logs, backups, retention periods and access controls for the selected deployment. Verify each provider's obligations separately.
+
+[AI Act & GDPR technical contributions](https://github.com/neomundi-io/ai-act-rgpd) · [API integration guide](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/API_INTEGRATION_GUIDE.md)
+
+**Review scope:** documentary findings dated **25 October 2026**, not an exhaustive production audit. This repository is not a contractual privacy policy, DPA or certification.
+
+---
 
 ## What travels where
 | Path | What the reviewed implementation shows | Boundary |

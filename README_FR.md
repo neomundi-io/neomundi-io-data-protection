@@ -1,8 +1,43 @@
-# Données et confidentialité
-[English](README.md) · [Français](README_FR.md)
+<div align="center">
 
-NeoMundi comporte plusieurs flux de données. Une affirmation sur un export ne
-décrit pas tous les traitements de l'API de mesure ni les enregistrements de Station.
+<sub><a href="README.md">English</a> · <b>Français</b></sub>
+
+# NeoMundi — Données & confidentialité
+
+### Comprendre les flux de données avant d'intégrer l'IA.
+
+**Quels contenus circulent, où les mesures sont effectuées et quelles informations restent enregistrées ou exportées : les frontières documentées de l'infrastructure NeoMundi.**
+
+**Measurement → Station → Evidence**
+
+[![Measurement](https://img.shields.io/badge/Measurement-Mesurer-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md)
+[![Station](https://img.shields.io/badge/Station-Observer-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md)
+[![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-public/blob/main/README.fr.md)
+[![Use cases](https://img.shields.io/badge/Cas_d_usage-Explorer-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
+
+**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Créer un compte](https://controltower.neomundi.io/welcome)**
+
+</div>
+
+---
+
+## Un principe : décrire chaque flux, sans promesse globale
+
+NeoMundi distingue **la transmission**, **le traitement**, **la conservation** et **l'export**. Un texte absent d'un export peut avoir été transmis, traité ou conservé sur un autre parcours. Aucune garantie générale « zéro transmission », « zéro stockage » ou « zéro conservation » n'est formulée ici.
+
+| Composant | Frontière à examiner |
+|---|---|
+| **Measurement / API** | Selon la requête, le prompt et la réponse peuvent être fournis ; des évaluateurs peuvent recevoir des contenus pour produire certaines mesures. |
+| **Station** | Son registre interne et son interface en lecture seule n'exposent pas les mêmes données. Une interface restreinte ne démontre pas l'absence de contenu dans le registre. |
+| **Evidence** | Les mécanismes de vérification d'intégrité, d'attestation et de traçabilité ne constituent pas, par eux-mêmes, une politique de confidentialité ou de conservation. Le contenu exact des artefacts exportés doit être contrôlé séparément. |
+
+**Avant intégration :** identifier les charges utiles, destinataires, évaluateurs, journaux, sauvegardes, durées de conservation et droits d'accès du déploiement retenu. Les garanties de chaque fournisseur doivent être vérifiées séparément.
+
+[Consulter les contributions AI Act & RGPD](https://github.com/neomundi-io/ai-act-rgpd/blob/main/README_FR.md) · [Documentation de l'API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/API_INTEGRATION_GUIDE.md)
+
+**Périmètre de la revue :** constats documentaires établis le **25 octobre 2026**, non équivalents à un audit exhaustif de production. Ce dépôt n'est ni une politique de confidentialité contractuelle, ni un DPA, ni une certification.
+
+---
 
 ## Ce qui circule
 | Parcours | Ce que montre l'implémentation examinée | Frontière |

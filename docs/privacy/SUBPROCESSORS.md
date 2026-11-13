@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.2 · 13 November 2026 · provisional.**
+> **V0.4 · 14 November 2026 · provisional.**
 >
 > 🔴 **This page lists only what is established.** A provider that *could*
 > be configured is not a provider that *is* receiving data, and we do not
@@ -68,10 +68,10 @@ Being honest about this category matters more than keeping it short.
 
 | Path | Status, **measured on 13 November 2026** |
 |---|---|
-| **Cohere** 🇨🇦 — document grounding | 🔴 **moved to category B-bis: the transfer is confirmed.** 760 measurements, 4 customers, July→November 2026. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2 |
-| **OpenAI** 🇺🇸 — document grounding | 🟢 **no result ever stored**, over 340,602 measurements. Not allow-listed by default in the merged code |
+| **Cohere** 🇨🇦 — document grounding | 🔴 **moved to category B-bis: the transfer is confirmed.** 760 measurements, 4 pilot accounts, July→November 2026. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2 |
+| **OpenAI** 🇺🇸 — document grounding | 🟢 **no result ever stored**, over 340,602 measurements. Not allow-listed by default, and the deployed guard refuses it |
 | Coherence, semantic risk | 🔴 **actually point at our host's AI service** in production, not at an internal model |
-| Factuality | an internal address with **no engine behind it** — channel unavailable |
+| Factuality | 🔴 **also points at our host's AI service** in production. Version 0.2 of this page described this channel as unavailable, on the strength of a supervision probe; the probe was wrong. Re-measured on 13 November 2026: **1831 of 1841** measurements over seven days carry a measured factuality signal, `evaluator_runtime=api.infomaniak.com`, `served_by=primary` |
 
 ⚠ **The guard protects against sending to *named providers*, not against
 *arbitrary destinations*.** An evaluator's address is a configuration
@@ -86,7 +86,7 @@ out"*. **The checks have since been carried out**, read-only, over the whole
 history of the measurement store.
 
 🔴 **One transfer is confirmed:** 760 measurements were grounded by Cohere
-between July and November 2026, for 4 customers. §3 above and
+between July and November 2026, for 4 pilot accounts. §3 above and
 [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2 carry the figures.
 
 🟢 **For OpenAI, no grounding result was ever stored** — zero out of

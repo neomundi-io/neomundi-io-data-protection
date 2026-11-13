@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.3 · 13 novembre 2026 · provisoire.**
+> **V0.4 · 14 novembre 2026 · provisoire.**
 >
 > 🟢 **Tout ce qui figure aux sections 2 à 5 est DÉPLOYÉ.** La production
 > sert la révision `fc5fadd9d212…` depuis le 13 novembre 2026, vérifiée sur

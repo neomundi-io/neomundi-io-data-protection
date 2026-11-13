@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.3 · 13 November 2026 · provisional.**
+> **V0.4 · 14 November 2026 · provisional.**
 >
 > This page exists because a documentation that lists only what works is a
 > sales page. Everything below is open.
@@ -54,7 +54,7 @@ measured, and the two providers give **different** answers.
 | Measurements carrying a grounding result | **760** |
 | Model that produced them | **`command-a-03-2025`** — a Cohere model, on all 760 |
 | Window | **10 July → 4 November 2026** |
-| Distinct customers | **4** |
+| Distinct pilot accounts | **4** |
 
 🔴 **For a result to exist, the content had to be sent.** This is a fact,
 not an inference. The channel is **declared** in

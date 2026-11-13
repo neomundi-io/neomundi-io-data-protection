@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.2 · 13 novembre 2026 · provisoire.**
+> **V0.4 · 14 novembre 2026 · provisoire.**
 >
 > 🔴 **Cette page ne liste que ce qui est établi.** Un fournisseur qui
 > *pourrait* être configuré n'est pas un fournisseur qui *reçoit* des
@@ -72,10 +72,10 @@ comptez désigner.
 
 | Chemin | État, **mesuré le 13 novembre 2026** |
 |---|---|
-| **Cohere** 🇨🇦 — ancrage documentaire | 🔴 **passe en catégorie B bis : le transfert est confirmé.** 760 mesures, 4 clients, juillet→novembre 2026. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2 |
-| **OpenAI** 🇺🇸 — ancrage documentaire | 🟢 **aucun résultat jamais enregistré**, sur 340 602 mesures. Hors liste blanche par défaut dans le code fusionné |
+| **Cohere** 🇨🇦 — ancrage documentaire | 🔴 **passe en catégorie B bis : le transfert est confirmé.** 760 mesures, 4 comptes pilotes, juillet→novembre 2026. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2 |
+| **OpenAI** 🇺🇸 — ancrage documentaire | 🟢 **aucun résultat jamais enregistré**, sur 340 602 mesures. Hors liste blanche par défaut, et le garde déployé le refuse |
 | Cohérence, risque sémantique | 🔴 **visent en réalité le service d'inférence de notre hébergeur** en production, pas un modèle interne |
-| Factualité | une adresse interne **sans moteur derrière** — canal indisponible |
+| Factualité | 🔴 **vise également le service d'inférence de notre hébergeur** en production. La version 0.2 de cette page décrivait ce canal comme indisponible, sur la foi d'une sonde de supervision ; la sonde était fausse. Remesuré le 13 novembre 2026 : **1831 mesures sur 1841** en sept jours portent un signal de factualité mesuré, `evaluator_runtime=api.infomaniak.com`, `served_by=primary` |
 
 ⚠ **Le garde protège contre les envois vers des *fournisseurs nommés*, pas
 contre des *destinations arbitraires*.** L'adresse d'un évaluateur est une
@@ -91,7 +91,7 @@ confirmés ni écartés ». **Les vérifications ont depuis été menées**, en
 lecture seule, sur toute l'histoire du magasin de mesures.
 
 🔴 **Un transfert est confirmé :** 760 mesures ont été ancrées par Cohere
-entre juillet et novembre 2026, pour 4 clients. Le §3 ci-dessus et
+entre juillet et novembre 2026, pour 4 comptes pilotes. Le §3 ci-dessus et
 [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2 portent les
 chiffres.
 

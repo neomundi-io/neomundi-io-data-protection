@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.2 · 13 novembre 2026 · provisoire.** Lisez d'abord
+> **V0.4 · 14 novembre 2026 · provisoire.** Lisez d'abord
 > [`README_FR.md`](README_FR.md), en particulier la distinction entre
 > **fusionné** et **déployé**.
 
@@ -31,8 +31,9 @@ conservé **verbatim**, borné à **10 extraits de 200 caractères au plus**.
 portaient de tels extraits**, et que **69,6 %** de ces extraits provenaient
 d'un repli mécanique recopiant les trois premières phrases de la réponse dès
 que l'évaluateur n'avait rien désigné. **Ce repli a été retiré** — voir
-[`DATA_RETENTION_FR.md`](DATA_RETENTION_FR.md) §4. **Fusionné, non
-déployé.**
+[`DATA_RETENTION_FR.md`](DATA_RETENTION_FR.md) §4. **Déployé le
+13 novembre 2026** — le champ renvoie désormais une liste vide à tous les
+scores.
 
 ## 2. Finalités
 
@@ -40,9 +41,16 @@ déployé.**
 |---|---|
 | Faire fonctionner le service de mesure | contenu soumis, données de compte |
 | Authentification et application des quotas | identifiants, données de compte |
-| Facturation | données de compte, pièces comptables |
+| Conservation des pièces comptables antérieures | données de compte, pièces comptables |
 | **Qualification scientifique des mesures** | résultats de mesure |
 | Sécurité et enquête sur les abus | journaux techniques |
+
+⚠ **Aucune facturation n'est actuellement effectuée.** La finalité
+ci-dessus est la *conservation* de pièces comptables émises antérieurement,
+non une activité de facturation active : depuis le 13 novembre 2026, le
+service en fonctionnement **refuse** d'émettre une facture tant qu'aucun
+émetteur n'est arrêté, plutôt que de produire une pièce comptable
+incomplète.
 
 La finalité scientifique est la raison pour laquelle les résultats de mesure
 ne sont **pas** supprimés avec un compte. Voir
@@ -63,7 +71,7 @@ sur une infrastructure que nous contrôlons ; d'autres non.
 | Stabilité | nos serveurs | non |
 | Cohérence | modèle sur nos propres serveurs | non |
 | Risque sémantique | service d'inférence de notre hébergeur | oui — vers notre hébergeur |
-| Factualité / instabilité | service d'inférence | **canal indisponible à la date de rédaction** |
+| Factualité / instabilité | service d'inférence de notre hébergeur | oui — vers notre hébergeur |
 | **Ancrage documentaire** *(optionnel)* | **prestataires hors de Suisse et hors de l'Union européenne** | **oui** |
 
 **Un garde encadre désormais ces appels.** Il combine une liste blanche
@@ -74,7 +82,10 @@ par défaut**.
 ⚠ Le quatrième chemin — celui de la démonstration — n'a pas été trouvé en
 lisant le code. Il l'a été par un **test structurel** qui analyse la source
 et signale tout endroit où la simple présence d'un identifiant est traitée
-comme une permission d'envoyer. *Fusionné, non déployé.*
+comme une permission d'envoyer. **Déployé le 13 novembre 2026**, et
+vérifié sur le service en fonctionnement : présenté avec un identifiant
+`openai` bien formé, il refuse, motif `provider_not_allowed`. La liste
+blanche réellement servie est `['cohere']`.
 
 ### 3.2 Les appels que **vous** initiez, avec **vos** identifiants
 
@@ -110,7 +121,7 @@ configuration déployée, et le défaut n'est pas ce qui tourne.
 |---|---|
 | **Cohérence / plongements** | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com` |
 | **Risque sémantique** | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com` |
-| Factualité | une adresse interne — **sans moteur derrière**, donc le canal est **indisponible** |
+| Factualité | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com`. La version 0.2 de cette page disait ce canal indisponible, sur la foi d'une sonde de supervision qui était fausse |
 
 🔴 **Deux des trois sortent donc de la machine**, vers le seul fournisseur
 avec lequel nous avons un accord. La destination est une **variable de

@@ -2,7 +2,7 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
-# Protection des données — documentation technique **V0.3**
+# Protection des données — documentation technique **V0.4**
 
 ### Ce que nous avons vérifié, comment, et ce que nous n'avons pas vérifié.
 
@@ -28,7 +28,7 @@ Trois choses, toutes des mesures plutôt que des reformulations :
    nommée ci-dessus. La version 0.1 consignait la question comme
    ouverte.
 2. 🔴 **Les vérifications de transfert ont été menées.** Un transfert est
-   désormais **confirmé** (Cohere, 760 mesures, 4 clients) ; pour l'autre
+   désormais **confirmé** (Cohere, 760 mesures, 4 comptes pilotes) ; pour l'autre
    fournisseur, aucun résultat enregistré sur 340 602 mesures. Voir
    [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2.
 3. 🔴 **Deux canaux d'évaluateur ne sont pas internes**, alors que la
@@ -171,6 +171,6 @@ votre contrat ou de l'interface.
 
 ---
 
-<sub>V0.3 · 13 novembre 2026 · Apache-2.0. Les descriptions antérieures
+<sub>V0.4 · 14 novembre 2026 · Apache-2.0. Les descriptions antérieures
 demeurent dans l'historique Git et ne constituent pas des engagements
 actuels.</sub>

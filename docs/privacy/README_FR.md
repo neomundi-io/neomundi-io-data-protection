@@ -31,6 +31,27 @@ C'est toujours vrai pour la plateforme entière. Ce qui a changé, c'est
 qu'une partie — **l'effacement des comptes** — a été construite, testée et
 auditée en profondeur. Ces pages décrivent ce travail, et lui seul.
 
+## Responsable de traitement
+
+**NeoMundi Recherche** — association régie par la loi du 1er juillet 1901.
+
+| | |
+|---|---|
+| **RNA** | `W563015824` |
+| **Siège** | 29 rue Tronchet, 75008 Paris, France |
+| **Identité publiée** | [neomundi.org/mentions-legales](https://neomundi.org/mentions-legales) |
+| **Pour exercer vos droits** | le formulaire de contact sur [neomundi.org/contact](https://neomundi.org/contact) — aucune adresse de courriel n'est publiée |
+
+NeoMundi Recherche porte la responsabilité des traitements de NeoMundi —
+l'API de mesure, le portail, les comptes utilisateurs, les clés, les
+mesures, Station, Evidence et les sites NeoMundi — **dans la limite des
+traitements effectivement opérés**.
+
+🔴 **Désigner un responsable ne rend pas les traitements conformes.** Cela
+tranche qui en répond. Ce qui reste ouvert figure dans
+[`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md), et c'est encore
+substantiel.
+
 ## Périmètre
 
 | Couvert | Non couvert |
@@ -38,7 +59,7 @@ auditée en profondeur. Ces pages décrivent ce travail, et lui seul.
 | L'effacement d'un compte du portail, et ce qui y survit | Toute durée de conservation — aucune n'est arrêtée |
 | Quel contenu sort de la machine, et vers qui | Le comportement historique du service en production |
 | La différence entre appels initiés par NeoMundi et par l'utilisateur | La Station, Evidence, les sites publics |
-| Ce que le code garantit, et ce qu'il ne peut pas garantir | Quelle entité juridique est responsable de traitement |
+| Ce que le code garantit, et ce qu'il ne peut pas garantir | La licéité des traitements — désigner un responsable n'est pas une appréciation |
 
 ## 🔴 À lire avant tout le reste : fusionné n'est pas déployé
 
@@ -95,9 +116,10 @@ Nommées en entier dans
 2. **Qu'un contenu ait été transmis à un fournisseur externe par le passé
    n'est ni confirmé ni écarté.** Le code actuel l'interdit par défaut ;
    cela ne dit rien de l'historique.
-3. **Aucune entité n'est désignée responsable de traitement ici**, parce que
-   cette décision est ouverte. Sans elle, ceci ne peut pas devenir une
-   politique de confidentialité.
+3. **L'accord d'hébergement a été signé sous une dénomination qui n'est pas
+   une entité juridique déclarée.** Le responsable est désormais arrêté ;
+   l'alignement du contrat ne l'est pas, et une demande de rectification est
+   préparée.
 
 ## Les quatre pages
 
@@ -110,15 +132,14 @@ Nommées en entier dans
 
 ## Contact
 
-Pour une question sur cette documentation, ouvrez une *issue* sur ce dépôt.
+**Pour exercer un droit sur vos données personnelles**, utilisez le
+formulaire de contact sur [neomundi.org/contact](https://neomundi.org/contact).
+C'est le canal que NeoMundi Recherche publie ; **aucune adresse de courriel
+n'est publiée**, et nous n'en inventons pas ici.
 
-⚠ Nous ne publions pas ici d'adresse de contact « protection des données ».
-En nommer une suppose un responsable de traitement désigné et un engagement
-de réponse dans un délai réglementaire — or la question du responsable est
-précisément celle qui reste ouverte *(voir
-[`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md))*. Pour toute question
-de compte ou de service, utilisez les canaux de votre contrat ou de
-l'interface.
+Pour une question sur **cette documentation**, ouvrez une *issue* sur ce
+dépôt. Pour toute question de compte ou de service, utilisez les canaux de
+votre contrat ou de l'interface.
 
 ---
 

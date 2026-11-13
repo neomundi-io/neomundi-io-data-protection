@@ -39,6 +39,23 @@ NeoMundi distingue **la transmission**, **le traitement**, **la conservation** e
 
 ---
 
+**Responsable de traitement — arrêté le 13 novembre 2026.** **NeoMundi
+Recherche**, association régie par la loi du 1er juillet 1901, RNA
+`W563015824`, 29 rue Tronchet, 75008 Paris —
+[identité publiée](https://neomundi.org/mentions-legales). Elle porte la
+responsabilité des traitements de NeoMundi, **dans la limite de ceux qui
+sont effectivement opérés**.
+
+🔴 **Cela tranche qui répond, pas si les traitements sont conformes.** Cela
+ne fait pas davantage de ce dépôt une politique de confidentialité — il
+n'en est toujours pas une.
+
+**→ [`docs/privacy/`](docs/privacy/README_FR.md)** — documentation technique
+**V0.1**, bilingue : catégories et flux, effacement et conservation,
+destinataires, et les limites qui restent ouvertes.
+
+---
+
 ## Ce qui circule
 | Parcours | Ce que montre l'implémentation examinée | Frontière |
 |---|---|---|

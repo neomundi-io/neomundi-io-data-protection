@@ -112,13 +112,20 @@ confirmer ces adresses plutôt que les déduire.
 
 Voir [`SUBPROCESSORS_FR.md`](SUBPROCESSORS_FR.md).
 
-## 5. Ce que nous n'affirmons pas ici
+## 5. Qui répond de ces traitements
 
-🔴 **Aucune entité juridique n'est désignée responsable de traitement dans
-cette documentation.** Cette décision est ouverte, et en nommer une avant
-qu'elle soit tranchée serait pire que n'en nommer aucune. Voir
-[`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §3.
+**NeoMundi Recherche**, association régie par la loi du 1er juillet 1901,
+RNA `W563015824`, 29 rue Tronchet, 75008 Paris — voir
+[`README_FR.md`](README_FR.md).
 
-Par conséquent, ces pages **ne peuvent pas** tenir lieu d'information due
-par un responsable de traitement. Elles décrivent la réalité technique ;
-l'information juridique est un document distinct, qui n'existe pas encore.
+Cela couvre les traitements décrits sur cette page, **dans la limite de ceux
+qui sont effectivement opérés**. Cela ne s'étend pas aux appels du §3.2, que
+vous initiez avec vos propres identifiants vers un fournisseur avec lequel
+vous êtes en relation contractuelle.
+
+🔴 **Désigner un responsable n'est pas une appréciation de licéité.** Ces
+pages décrivent une réalité technique ; elles ne sont **pas** l'information
+due par un responsable au titre des articles 13 et 14 du RGPD, et elles ne
+prétendent pas l'être. Cette information est un document distinct, et
+l'écrire n'est pas un travail d'ingénierie. Ce qui reste ouvert figure dans
+[`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md).

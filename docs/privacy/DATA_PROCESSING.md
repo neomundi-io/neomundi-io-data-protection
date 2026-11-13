@@ -108,12 +108,20 @@ addresses rather than infer them.
 
 See [`SUBPROCESSORS.md`](SUBPROCESSORS.md).
 
-## 5. What we do not state here
+## 5. Who answers for this processing
 
-🔴 **No legal entity is named as data controller in this documentation.**
-That decision is open, and naming one before it is settled would be worse
-than naming none. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §3.
+**NeoMundi Recherche**, association governed by the French law of
+1 July 1901, RNA `W563015824`, 29 rue Tronchet, 75008 Paris —
+see [`README.md`](README.md).
 
-Consequently these pages **cannot** serve as the information notice required
-of a controller. They describe the technical reality; the legal notice is a
-separate document that does not yet exist.
+That covers the processing described on this page, **within the limits of
+what is actually carried out**. It does not extend to the calls described in
+§3.2, which you initiate with your own credentials toward a provider you
+hold the contract with.
+
+🔴 **Naming a controller is not an assessment of lawfulness.** These pages
+describe technical reality; they are **not** the information notice a
+controller owes under Articles 13 and 14 of the GDPR, and they do not claim
+to be. That notice is a separate document, and writing it is not an
+engineering task. What remains open is listed in
+[`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).

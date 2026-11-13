@@ -30,6 +30,27 @@ That is still true for the platform as a whole. What changed is that one
 part of it — **account erasure** — has now been built, tested and reviewed in
 depth. These pages describe that work, and only that work.
 
+## Data controller
+
+**NeoMundi Recherche** — association governed by the French law of
+1 July 1901.
+
+| | |
+|---|---|
+| **RNA** | `W563015824` |
+| **Registered office** | 29 rue Tronchet, 75008 Paris, France |
+| **Published identity** | [neomundi.org/mentions-legales](https://neomundi.org/mentions-legales) |
+| **To exercise your rights** | the contact form at [neomundi.org/contact](https://neomundi.org/contact) — no email address is published |
+
+NeoMundi Recherche carries responsibility for NeoMundi's processing — the
+measurement API, the portal, user accounts, keys, measurements, Station,
+Evidence and the NeoMundi websites — **within the limits of the processing
+actually carried out**.
+
+🔴 **Naming a controller does not make the processing compliant.** It
+settles who answers for it. What remains open is listed in
+[`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md), and it is still substantial.
+
 ## Scope
 
 | Covered | Not covered |
@@ -37,7 +58,7 @@ depth. These pages describe that work, and only that work.
 | Erasure of a portal account and what survives it | Any retention period — none has been decided |
 | Which content leaves the machine, and to whom | The historical behaviour of the production service |
 | The difference between NeoMundi-initiated and user-initiated calls | Station, Evidence, the public websites |
-| What the code guarantees, and what it cannot | Which legal entity is the data controller |
+| What the code guarantees, and what it cannot | Whether the processing is lawful — naming a controller is not an assessment |
 
 ## 🔴 Read this before anything else: merged is not deployed
 
@@ -93,8 +114,9 @@ that matter most:
 2. **Whether any content was transmitted to an external provider in the
    past is neither confirmed nor ruled out.** The current code forbids it by
    default; that says nothing about history.
-3. **No entity is named as data controller here**, because that decision is
-   open. Without it, this cannot become a privacy policy.
+3. **The hosting agreement was signed under a denomination that is not a
+   declared legal entity.** The controller is now settled; aligning the
+   contract with it is not, and a rectification has been prepared.
 
 ## The four pages
 
@@ -107,14 +129,14 @@ that matter most:
 
 ## Contact
 
-For a question about this documentation, open an issue on this repository.
+**To exercise a right over your personal data**, use the contact form at
+[neomundi.org/contact](https://neomundi.org/contact). It is the channel
+NeoMundi Recherche publishes; **no email address is published**, and we do
+not invent one here.
 
-⚠ We do not publish a data-protection contact address here. Naming one
-implies a designated controller and a commitment to answer within a
-regulatory deadline — and the controller question is precisely what remains
-open *(see [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md))*. For account or
-service matters, use the channels on your contract or in the service
-interface.
+For a question about **this documentation**, open an issue on this
+repository. For account or service matters, use the channels on your
+contract or in the service interface.
 
 ---
 

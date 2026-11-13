@@ -2,7 +2,7 @@
 
 <sub><b>English</b> · <a href="README_FR.md">Français</a></sub>
 
-# Data protection — technical documentation **V0.1**
+# Data protection — technical documentation **V0.2**
 
 ### What we verified, how we verified it, and what we did not.
 
@@ -10,7 +10,7 @@
 
 ---
 
-> **Version 0.1 · 13 November 2026 · provisional.**
+> **Version 0.2 · 13 November 2026 · provisional.**
 >
 > 🔴 **This is not a privacy policy, not a DPA, and not a statement of GDPR
 > compliance.** It is a technical description, dated and bounded, of how
@@ -19,7 +19,26 @@
 
 ---
 
-## Why a version 0.1
+## What changed in version 0.2
+
+Three things, all of them measurements rather than rewording:
+
+1. 🟢 **The controller is settled** — NeoMundi Recherche, named above.
+   Version 0.1 recorded that question as open.
+2. 🔴 **The transfer checks were carried out.** One transfer is now
+   **confirmed** (Cohere, 760 measurements, 4 customers); for the other
+   provider, no stored result exists over 340,602 measurements. See
+   [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2.
+3. 🔴 **Two evaluator channels are not internal**, as version 0.1
+   implied they were by default: in production they point at our host's
+   AI service. Corrected in
+   [`DATA_PROCESSING.md`](DATA_PROCESSING.md) §3.3.
+
+⚠ **What has NOT changed:** the erasure behaviour is still **merged and
+not deployed**, and we have verified that directly — production serves
+the previous revision.
+
+## Why this documentation exists
 
 This documentation exists because the previous page in this repository
 ([`../../README.md`](../../README.md), dated 25 October 2026) stated plainly
@@ -140,5 +159,5 @@ contract or in the service interface.
 
 ---
 
-<sub>V0.1 · 13 November 2026 · Apache-2.0. Earlier descriptions remain in Git
+<sub>V0.2 · 13 November 2026 · Apache-2.0. Earlier descriptions remain in Git
 history and are not current commitments.</sub>

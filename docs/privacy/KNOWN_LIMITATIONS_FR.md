@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 novembre 2026 · provisoire.**
+> **V0.2 · 13 novembre 2026 · provisoire.**
 >
 > Cette page existe parce qu'une documentation qui n'énumère que ce qui
 > fonctionne est une page commerciale. Tout ce qui suit est ouvert.
@@ -28,28 +28,54 @@ en production.
 **Ce qui lèverait cette limite :** un déploiement, qui exige une
 autorisation explicite et les vérifications du §2.
 
-## 2. Transferts externes — ni confirmés, ni écartés
+## 2. Transferts externes — mesurés, et l'un est confirmé
 
-Le code actuel interdit par défaut l'envoi vers `openai`, et le garde est
-couvert par des tests qui s'exécutent en intégration continue.
+🟢 **Les vérifications annoncées en version 0.1 ont été menées**, en lecture
+seule, contre le service en production et sur **toute** l'histoire du
+magasin de mesures : **340 602 mesures, du 1er mai au 13 novembre 2026**.
 
-🔴 **Cela ne dit rien du passé.** Avant l'existence du garde, le chemin
-d'ancrage documentaire était structurellement armé, et le rejet d'un
-identifiant invalide serait arrivé **après** que le corps de la requête eut
-quitté la machine.
+La version 0.1 disait « ni confirmé, ni écarté ». C'est désormais mesuré, et
+les deux fournisseurs donnent des réponses **différentes**.
 
-Deux vérifications contre le service en production trancheraient la
-question. **Aucune n'a été menée.** L'une compte, dans le magasin de
-mesures, combien de requêtes ont jamais porté un contexte d'ancrage — c'est
-la seule qui couvre toute l'histoire du corpus. L'autre lit le journal du
-service, et se heurte au fait que ce journal n'a aucune rotation établie et
-que le conteneur a été recréé le 12 novembre 2026.
+### Cohere — 🔴 transfert **confirmé**
 
-**Verdict : ni confirmé, ni écarté.** Un identifiant invalide n'est pas une
-preuve d'absence, et nous ne le présenterons pas comme telle.
+| | |
+|---|---|
+| Mesures portant un résultat d'ancrage | **760** |
+| Modèle qui les a produites | **`command-a-03-2025`** — un modèle Cohere, sur les 760 |
+| Fenêtre | **10 juillet → 4 novembre 2026** |
+| Clients distincts | **4** |
 
-**Ce qui lèverait cette limite :** exécuter ces deux contrôles en lecture
-seule.
+🔴 **Pour qu'un résultat existe, le contenu a dû être transmis.** C'est un
+fait, pas une déduction. Le canal est **déclaré** au §3.1 de
+[`DATA_PROCESSING_FR.md`](DATA_PROCESSING_FR.md) et il est **optionnel** :
+il ne s'active que si une requête joint des documents pour l'ancrage.
+
+⚠ **Ce qui reste ouvert, et ce n'est pas technique :** aucun accord de
+sous-traitance avec ce fournisseur n'est au dossier. Le Canada bénéficie
+d'une décision d'adéquation **partielle**, de portée limitée ; savoir si ce
+fournisseur entre dans son champ est une appréciation **juridique** que nous
+n'avons pas obtenue et que nous n'improviserons pas.
+
+### OpenAI — 🟢 **absence établie, sur le périmètre vérifié**
+
+| | |
+|---|---|
+| Mesures portant un résultat d'ancrage OpenAI | **0 sur 340 602** |
+| Occurrences dans le journal du service | **0** |
+
+🔴 **À lire précisément.** Ce qui est établi, c'est qu'**aucun résultat
+d'ancrage OpenAI n'a jamais été enregistré**, sur tout le corpus. Ce qui
+n'est **pas** établi, c'est qu'aucun corps de requête n'ait jamais quitté la
+machine : un appel rejeté par le fournisseur ne laisse aucune trace, et le
+journal du service ne couvre que depuis le **12 novembre 2026** — le
+conteneur a été recréé ce jour-là.
+
+**Un identifiant invalide n'est pas une preuve d'absence**, et nous ne le
+présentons pas comme telle.
+
+**Ce qui lèverait le reste :** que le garde de sortie atteigne la
+production — voir §1.
 
 ## 3. Le responsable est arrêté ; le contrat ne l'est pas encore
 

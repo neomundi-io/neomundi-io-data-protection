@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 novembre 2026 · provisoire.** Lisez d'abord
+> **V0.2 · 13 novembre 2026 · provisoire.** Lisez d'abord
 > [`README_FR.md`](README_FR.md), en particulier la distinction entre
 > **fusionné** et **déployé**.
 
@@ -99,14 +99,28 @@ l'Union européenne **dépend de votre choix de fournisseur**, et la relation
 avec lui est **la vôtre**. Nous n'avons ni contrat avec lui, ni visibilité
 sur ce qu'il fait de votre contenu.
 
-### 3.3 Une frontière qu'il vaut mieux énoncer
+### 3.3 Ce que la configuration déployée fait réellement
 
-Le garde du §3.1 protège contre les envois vers des **fournisseurs nommés**.
-Il ne contraint pas des **destinations arbitraires** : trois chemins
-d'évaluateur visent un modèle interne **par défaut**, mais leur adresse est
-une variable de configuration. **Une configuration peut les rendre externes
-sans aucun changement de code.** Qui examine un déploiement précis devrait
-confirmer ces adresses plutôt que les déduire.
+La version 0.1 disait que trois chemins d'évaluateur visaient un modèle
+interne « par défaut », et que leur adresse était une variable de
+configuration. C'était exact et **insuffisant** : nous avons depuis lu la
+configuration déployée, et le défaut n'est pas ce qui tourne.
+
+| Canal | Où il pointe réellement, en production |
+|---|---|
+| **Cohérence / plongements** | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com` |
+| **Risque sémantique** | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com` |
+| Factualité | une adresse interne — **sans moteur derrière**, donc le canal est **indisponible** |
+
+🔴 **Deux des trois sortent donc de la machine**, vers le seul fournisseur
+avec lequel nous avons un accord. La destination est une **variable de
+configuration**, pas une constante de code : le garde du §3.1 protège contre
+les envois vers des **fournisseurs nommés**, pas contre des **destinations
+arbitraires**.
+
+**Qui examine un déploiement précis devrait lire ces adresses plutôt que les
+déduire de cette page** — y compris celui-ci, qui décrit le déploiement
+mesuré le 13 novembre 2026.
 
 ## 4. Destinataires
 

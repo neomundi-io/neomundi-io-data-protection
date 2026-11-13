@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 November 2026 · provisional.**
+> **V0.2 · 13 November 2026 · provisional.**
 >
 > This page exists because a documentation that lists only what works is a
 > sales page. Everything below is open.
@@ -26,27 +26,52 @@ verified is verified **on the merged candidate**, not in production.
 **What would close this:** a deployment, which requires an explicit
 authorisation and the checks in §2.
 
-## 2. External transfers — not confirmed, not ruled out
+## 2. External transfers — measured, and one is confirmed
 
-The current code forbids sending to `openai` by default, and the guard is
-covered by tests that run in continuous integration.
+🟢 **The checks announced in version 0.1 have been carried out**, read-only,
+against the production service and over the **whole** history of the
+measurement store: **340,602 measurements, 1 May to 13 November 2026**.
 
-🔴 **This says nothing about the past.** Before the guard existed, the
-document-grounding path was structurally armed, and the rejection of an
-invalid credential would have arrived **after** the request body had already
-left the machine.
+Version 0.1 said this was *"neither confirmed nor ruled out"*. It is now
+measured, and the two providers give **different** answers.
 
-Two checks against the production service would settle it. **Neither has
-been carried out.** One counts, in the measurement store, how many requests
-ever carried a grounding context — it is the only one that covers the whole
-history of the corpus. The other reads the service log, and is bounded by
-the fact that the log has no established rotation and the container was
-recreated on 12 November 2026.
+### Cohere — 🔴 transfer **confirmed**
 
-**Verdict: neither confirmed nor ruled out.** An invalid credential is not
-evidence of absence, and we will not present it as such.
+| | |
+|---|---|
+| Measurements carrying a grounding result | **760** |
+| Model that produced them | **`command-a-03-2025`** — a Cohere model, on all 760 |
+| Window | **10 July → 4 November 2026** |
+| Distinct customers | **4** |
 
-**What would close this:** running those two read-only checks.
+🔴 **For a result to exist, the content had to be sent.** This is a fact,
+not an inference. The channel is **declared** in
+[`DATA_PROCESSING.md`](DATA_PROCESSING.md) §3.1 and it is **optional** — it
+runs only when a request attaches documents for grounding.
+
+⚠ **What remains open, and it is not technical:** no processing agreement
+with this provider is on file. Canada benefits from a **partial** adequacy
+decision, limited in scope; whether this provider falls inside it is a
+**legal** assessment we have not obtained and will not improvise.
+
+### OpenAI — 🟢 **absence established, on the verified perimeter**
+
+| | |
+|---|---|
+| Measurements carrying an OpenAI grounding result | **0 out of 340,602** |
+| Occurrences in the service log | **0** |
+
+🔴 **Read that precisely.** What is established is that **no OpenAI
+grounding result was ever stored**, over the entire corpus. What is **not**
+established is that no request body ever left the machine: a call rejected
+by the provider leaves no record, and the service log only covers since
+**12 November 2026** — the container was recreated that day.
+
+**An invalid credential is not evidence of absence**, and we do not present
+it as such.
+
+**What would close the remainder:** the egress guard reaching production —
+see §1.
 
 ## 3. The controller is settled; the contract is not yet aligned
 

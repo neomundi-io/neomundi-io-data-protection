@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 novembre 2026 · provisoire.**
+> **V0.2 · 13 novembre 2026 · provisoire.**
 >
 > 🔴 **Tout ce qui figure aux sections 2 à 5 est fusionné, non déployé.**
 > La fusion dans la lignée de production date du 13 novembre 2026, au commit

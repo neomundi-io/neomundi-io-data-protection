@@ -2,7 +2,7 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
-# Protection des données — documentation technique **V0.1**
+# Protection des données — documentation technique **V0.2**
 
 ### Ce que nous avons vérifié, comment, et ce que nous n'avons pas vérifié.
 
@@ -10,7 +10,7 @@
 
 ---
 
-> **Version 0.1 · 13 novembre 2026 · provisoire.**
+> **Version 0.2 · 13 novembre 2026 · provisoire.**
 >
 > 🔴 **Ce n'est ni une politique de confidentialité, ni un DPA, ni une
 > déclaration de conformité au RGPD.** C'est une description technique,
@@ -20,7 +20,28 @@
 
 ---
 
-## Pourquoi une version 0.1
+## Ce qui a changé en version 0.2
+
+Trois choses, toutes des mesures plutôt que des reformulations :
+
+1. 🟢 **Le responsable de traitement est arrêté** — NeoMundi Recherche,
+   nommée ci-dessus. La version 0.1 consignait la question comme
+   ouverte.
+2. 🔴 **Les vérifications de transfert ont été menées.** Un transfert est
+   désormais **confirmé** (Cohere, 760 mesures, 4 clients) ; pour l'autre
+   fournisseur, aucun résultat enregistré sur 340 602 mesures. Voir
+   [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2.
+3. 🔴 **Deux canaux d'évaluateur ne sont pas internes**, alors que la
+   version 0.1 laissait entendre qu'ils l'étaient par défaut : en
+   production ils visent le service d'inférence de notre hébergeur.
+   Corrigé au §3.3 de
+   [`DATA_PROCESSING_FR.md`](DATA_PROCESSING_FR.md).
+
+⚠ **Ce qui n'a PAS changé :** le comportement d'effacement reste
+**fusionné et non déployé**, et nous l'avons vérifié directement — la
+production sert la révision antérieure.
+
+## Pourquoi cette documentation existe
 
 Cette documentation existe parce que la page précédente de ce dépôt
 ([`../../README_FR.md`](../../README_FR.md), datée du 25 octobre 2026)
@@ -143,6 +164,6 @@ votre contrat ou de l'interface.
 
 ---
 
-<sub>V0.1 · 13 novembre 2026 · Apache-2.0. Les descriptions antérieures
+<sub>V0.2 · 13 novembre 2026 · Apache-2.0. Les descriptions antérieures
 demeurent dans l'historique Git et ne constituent pas des engagements
 actuels.</sub>

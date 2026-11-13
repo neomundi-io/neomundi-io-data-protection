@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 November 2026 · provisional.** Read
+> **V0.2 · 13 November 2026 · provisional.** Read
 > [`README.md`](README.md) first — in particular the distinction between
 > **merged** and **deployed**.
 
@@ -95,14 +95,27 @@ call you asked for, to a provider **you** hold the contract with.
 **yours**. We have neither a contract with them nor visibility over what
 they do with your content.
 
-### 3.3 A boundary worth stating plainly
+### 3.3 What the deployed configuration actually does
 
-The guard in §3.1 protects against sending to **named providers**. It does
-not constrain **arbitrary destinations**: three evaluator paths point at an
-internal model **by default**, but their address is a configuration
-variable. **A configuration can make them external without any code
-change.** Anyone reviewing a specific deployment should confirm those
-addresses rather than infer them.
+Version 0.1 said three evaluator paths pointed at an internal model *"by
+default"*, and that their address was a configuration variable. That was
+accurate and **insufficient**: we have since read the deployed
+configuration, and the default is not what runs.
+
+| Channel | Where it actually points, in production |
+|---|---|
+| **Coherence / embeddings** | 🔴 **our host's AI service** — `api.infomaniak.com` |
+| **Semantic risk** | 🔴 **our host's AI service** — `api.infomaniak.com` |
+| Factuality | an internal address — with **no engine behind it**, so the channel is **unavailable** |
+
+🔴 **So two of the three leave the machine**, toward the one provider we do
+have an agreement with. The destination is a **configuration variable**, not
+a code constant: the guard in §3.1 protects against sending to **named
+providers**, not against **arbitrary destinations**.
+
+**Anyone reviewing a specific deployment should read those addresses rather
+than infer them from this page** — including this one, which describes the
+deployment measured on 13 November 2026.
 
 ## 4. Recipients
 

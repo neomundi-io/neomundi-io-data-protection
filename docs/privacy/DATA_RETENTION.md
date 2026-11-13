@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 November 2026 · provisional.**
+> **V0.2 · 13 November 2026 · provisional.**
 >
 > 🔴 **Everything in sections 2 to 5 is merged, not deployed.** It was
 > merged into the production lineage on 13 November 2026 at commit

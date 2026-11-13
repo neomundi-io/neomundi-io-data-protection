@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 November 2026 · provisional.**
+> **V0.2 · 13 November 2026 · provisional.**
 >
 > 🔴 **This page lists only what is established.** A provider that *could*
 > be configured is not a provider that *is* receiving data, and we do not
@@ -66,30 +66,38 @@ Before using this path, review the terms of the provider you intend to name.
 
 Being honest about this category matters more than keeping it short.
 
-| Path | Default destination | Status |
-|---|---|---|
-| Document-grounding evaluators | **Cohere** 🇨🇦 / **OpenAI** 🇺🇸 | reachable; `openai` **is not allow-listed by default**; `cohere` is |
-| Coherence, semantic risk, factuality evaluators | an **internal** model | **their address is a configuration variable** — a deployment can point them elsewhere |
+| Path | Status, **measured on 13 November 2026** |
+|---|---|
+| **Cohere** 🇨🇦 — document grounding | 🔴 **moved to category B-bis: the transfer is confirmed.** 760 measurements, 4 customers, July→November 2026. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2 |
+| **OpenAI** 🇺🇸 — document grounding | 🟢 **no result ever stored**, over 340,602 measurements. Not allow-listed by default in the merged code |
+| Coherence, semantic risk | 🔴 **actually point at our host's AI service** in production, not at an internal model |
+| Factuality | an internal address with **no engine behind it** — channel unavailable |
 
 ⚠ **The guard protects against sending to *named providers*, not against
-*arbitrary destinations*.** Three evaluator paths point at an internal model
-by default, but nothing in the code prevents a configuration from making
-them external. **Confirm the actual addresses for the deployment you are
+*arbitrary destinations*.** An evaluator's address is a configuration
+variable, and the deployed configuration is **not** the code default — as
+the third row shows. **Read the actual addresses for the deployment you are
 reviewing rather than inferring them from this page.**
 
-## 5. What we cannot tell you
+## 5. What we now know, and what we still cannot tell you
 
-🔴 **Whether content was transmitted to an external provider in the past is
-neither confirmed nor ruled out.**
+Version 0.1 of this page said transfers were *"neither confirmed nor ruled
+out"*. **The checks have since been carried out**, read-only, over the whole
+history of the measurement store.
 
-The allow-list described here is recent. Before it, the document-grounding
-path was structurally armed toward a provider that is now excluded by
-default. Establishing what actually happened requires checks against the
-production service that have **not** been carried out.
+🔴 **One transfer is confirmed:** 760 measurements were grounded by Cohere
+between July and November 2026, for 4 customers. §3 above and
+[`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2 carry the figures.
 
-**An invalid credential is not evidence that no transfer ever occurred.** We
-will not make that inference, and nothing on this page should be read as
-making it. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2.
+🟢 **For OpenAI, no grounding result was ever stored** — zero out of
+340,602 measurements.
+
+**What we still cannot tell you**, and will not pretend otherwise: whether a
+request body ever left the machine toward a provider that then rejected it.
+A rejected call leaves no record, and the service log only covers since
+12 November 2026. **An invalid credential is not evidence that no transfer
+ever occurred**, and nothing on this page should be read as making that
+inference.
 
 ## 6. Payments
 

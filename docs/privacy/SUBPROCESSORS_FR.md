@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.1 · 13 novembre 2026 · provisoire.**
+> **V0.2 · 13 novembre 2026 · provisoire.**
 >
 > 🔴 **Cette page ne liste que ce qui est établi.** Un fournisseur qui
 > *pourrait* être configuré n'est pas un fournisseur qui *reçoit* des
@@ -70,31 +70,40 @@ comptez désigner.
 
 Être honnête sur cette catégorie importe plus que de la garder courte.
 
-| Chemin | Destination par défaut | État |
-|---|---|---|
-| Évaluateurs d'ancrage documentaire | **Cohere** 🇨🇦 / **OpenAI** 🇺🇸 | atteignables ; `openai` **n'est pas sur la liste blanche par défaut**, `cohere` l'est |
-| Évaluateurs de cohérence, risque sémantique, factualité | un modèle **interne** | **leur adresse est une variable de configuration** — un déploiement peut les pointer ailleurs |
+| Chemin | État, **mesuré le 13 novembre 2026** |
+|---|---|
+| **Cohere** 🇨🇦 — ancrage documentaire | 🔴 **passe en catégorie B bis : le transfert est confirmé.** 760 mesures, 4 clients, juillet→novembre 2026. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2 |
+| **OpenAI** 🇺🇸 — ancrage documentaire | 🟢 **aucun résultat jamais enregistré**, sur 340 602 mesures. Hors liste blanche par défaut dans le code fusionné |
+| Cohérence, risque sémantique | 🔴 **visent en réalité le service d'inférence de notre hébergeur** en production, pas un modèle interne |
+| Factualité | une adresse interne **sans moteur derrière** — canal indisponible |
 
 ⚠ **Le garde protège contre les envois vers des *fournisseurs nommés*, pas
-contre des *destinations arbitraires*.** Trois chemins d'évaluateur visent
-un modèle interne par défaut, mais rien dans le code n'empêche une
-configuration de les rendre externes. **Confirmez les adresses réelles du
-déploiement que vous examinez plutôt que de les déduire de cette page.**
+contre des *destinations arbitraires*.** L'adresse d'un évaluateur est une
+variable de configuration, et la configuration déployée **n'est pas** le
+défaut du code — la troisième ligne le montre. **Lisez les adresses réelles
+du déploiement que vous examinez plutôt que de les déduire de cette
+page.**
 
-## 5. Ce que nous ne pouvons pas vous dire
+## 5. Ce que nous savons désormais, et ce que nous ne pouvons toujours pas dire
 
-🔴 **Qu'un contenu ait été transmis à un fournisseur externe par le passé
-n'est ni confirmé ni écarté.**
+La version 0.1 de cette page disait que les transferts étaient « ni
+confirmés ni écartés ». **Les vérifications ont depuis été menées**, en
+lecture seule, sur toute l'histoire du magasin de mesures.
 
-La liste blanche décrite ici est récente. Auparavant, le chemin d'ancrage
-documentaire était structurellement armé vers un fournisseur aujourd'hui
-exclu par défaut. Établir ce qui s'est réellement passé exige des
-vérifications contre le service en production qui **n'ont pas** été menées.
+🔴 **Un transfert est confirmé :** 760 mesures ont été ancrées par Cohere
+entre juillet et novembre 2026, pour 4 clients. Le §3 ci-dessus et
+[`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §2 portent les
+chiffres.
 
-**Un identifiant invalide ne prouve pas qu'aucun transfert n'a eu lieu.**
-Nous ne ferons pas cette déduction, et rien sur cette page ne doit être lu
-comme la faisant. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md)
-§2.
+🟢 **Pour OpenAI, aucun résultat d'ancrage n'a jamais été enregistré** —
+zéro sur 340 602 mesures.
+
+**Ce que nous ne pouvons toujours pas vous dire**, et nous ne prétendrons
+pas le contraire : si un corps de requête a jamais quitté la machine vers un
+fournisseur qui l'a ensuite rejeté. Un appel rejeté ne laisse aucune trace,
+et le journal du service ne couvre que depuis le 12 novembre 2026. **Un
+identifiant invalide ne prouve pas qu'aucun transfert n'a eu lieu**, et rien
+sur cette page ne doit être lu comme faisant cette déduction.
 
 ## 6. Paiements
 

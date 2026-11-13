@@ -6,27 +6,38 @@
 
 </div>
 
-> **V0.2 · 13 novembre 2026 · provisoire.**
+> **V0.3 · 13 novembre 2026 · provisoire.**
 >
 > Cette page existe parce qu'une documentation qui n'énumère que ce qui
 > fonctionne est une page commerciale. Tout ce qui suit est ouvert.
 
 ---
 
-## 1. Fusionné n'est pas déployé — la limite qui commande toutes les autres
+## 1. 🟢 Déployé — la limite qui commandait toutes les autres est levée
 
-Le comportement d'effacement décrit dans
-[`DATA_RETENTION_FR.md`](DATA_RETENTION_FR.md) a été fusionné le
-13 novembre 2026 dans la branche de la lignée de production. **Il n'a pas
-été déployé.**
+Les versions 0.1 et 0.2 ouvraient cette page en avertissant que le
+comportement d'effacement était fusionné mais **non déployé**, et que le
+service en fonctionnement détruisait encore les factures à la suppression
+d'un compte.
 
-🔴 **Le service en fonctionnement se comporte encore comme avant** : la
-suppression d'un compte cascade, et cette cascade détruit les factures. Tout
-ce que nous décrivons comme vérifié l'est **sur le candidat fusionné**, pas
-en production.
+**Ce n'est plus le cas.** La production sert la révision `fc5fadd9d212…`
+depuis le 13 novembre 2026, vérifiée sur les conteneurs en service : le
+garde de sortie refuse `openai`, le repli d'extraits rend une liste vide, la
+seconde copie sur disque est désactivée, et l'émission de facture refuse de
+s'exécuter tant qu'aucun émetteur n'est arrêté.
 
-**Ce qui lèverait cette limite :** un déploiement, qui exige une
-autorisation explicite et les vérifications du §2.
+⚠ **Deux choses que cela ne lève PAS**, et elles font l'objet des §3 et
+§4 : l'émetteur des factures n'est toujours pas arrêté — c'est précisément
+pourquoi l'émission refuse désormais plutôt que de produire un document
+incomplet — et aucune durée de conservation comptable n'est fixée.
+
+⚠ **Et une affirmation encore en service, et encore fausse** : les
+conditions de service servies par le portail nomment une entité qui
+n'opère plus le service. Elles ont été délibérément laissées intactes : leur
+texte est servi en mémoire, sans archive, alors que chaque compte enregistre
+la version qu'il a acceptée — modifier la version 1.0 en place détruirait
+toute preuve de consentement existante. En publier une version corrigée est
+un travail de rédaction juridique, pas un déploiement.
 
 ## 2. Transferts externes — mesurés, et l'un est confirmé
 

@@ -2,7 +2,7 @@
 
 <sub><b>English</b> · <a href="README_FR.md">Français</a></sub>
 
-# Data protection — technical documentation **V0.2**
+# Data protection — technical documentation **V0.3**
 
 ### What we verified, how we verified it, and what we did not.
 
@@ -34,9 +34,9 @@ Three things, all of them measurements rather than rewording:
    AI service. Corrected in
    [`DATA_PROCESSING.md`](DATA_PROCESSING.md) §3.3.
 
-⚠ **What has NOT changed:** the erasure behaviour is still **merged and
-not deployed**, and we have verified that directly — production serves
-the previous revision.
+🟢 **And in version 0.3, the one thing that had not changed, has.** The
+erasure behaviour is **deployed**. Production serves revision
+`fc5fadd9d212…`, verified on the running containers — see below.
 
 ## Why this documentation exists
 
@@ -79,21 +79,27 @@ settles who answers for it. What remains open is listed in
 | The difference between NeoMundi-initiated and user-initiated calls | Station, Evidence, the public websites |
 | What the code guarantees, and what it cannot | Whether the processing is lawful — naming a controller is not an assessment |
 
-## 🔴 Read this before anything else: merged is not deployed
+## 🟢 Deployed on 13 November 2026 — and verified on the running service
 
-The erasure behaviour described in
-[`DATA_RETENTION.md`](DATA_RETENTION.md) was merged on **13 November 2026**
-into the production lineage branch, at commit
-[`1a64aeaf`](https://github.com/neomundi-io/Backend_plateforme_v2/commit/1a64aeaff073f633f06795d61cb8e8424b90299c)
-*(private repository)*.
+Versions 0.1 and 0.2 of this page said the erasure behaviour was *merged,
+not deployed*, and warned readers not to assume the better behaviour was
+live. **It is now live.**
 
-**It has not been deployed.** No image-publishing workflow listens to that
-branch, and none was triggered. **The running service does not behave this
-way yet.**
+| | |
+|---|---|
+| **Revision served** | `fc5fadd9d21251712ed34a13c23803dfccc37123` |
+| Services | the measurement engine and the portal |
+| Verified | on the running containers, not inferred from a branch |
+| Unchanged | the web frontend, deliberately — this release does not touch it |
 
-Every statement about erasure in these pages is therefore marked **merged,
-not deployed**. We would rather publish that distinction than let a reader
-assume the better behaviour is already live.
+**What was verified on the running service**, not on a candidate:
+
+- the external-egress guard is active, and refuses `openai` — `provider_not_allowed`, even when presented with a well-formed credential;
+- the mechanical excerpt fallback returns an empty list at every score;
+- the second on-disk copy of client output is disabled;
+- the purged-account state exists, and invoice issuance refuses to run while no issuer is decided;
+- `measurement_version` is **3.5.0**, unchanged — results stay comparable with everything measured before;
+- the corpus, invoices, wallets, accounts and API keys are untouched, to the row.
 
 ## What is actually verified
 
@@ -159,5 +165,5 @@ contract or in the service interface.
 
 ---
 
-<sub>V0.2 · 13 November 2026 · Apache-2.0. Earlier descriptions remain in Git
+<sub>V0.3 · 13 November 2026 · Apache-2.0. Earlier descriptions remain in Git
 history and are not current commitments.</sub>

@@ -39,6 +39,22 @@ NeoMundi distinguishes **transmission**, **processing**, **retention** and **exp
 
 ---
 
+**Data controller — settled 13 November 2026.** **NeoMundi Recherche**,
+association governed by the French law of 1 July 1901, RNA `W563015824`,
+29 rue Tronchet, 75008 Paris —
+[published identity](https://neomundi.org/mentions-legales). It carries
+responsibility for NeoMundi's processing, **within the limits of the
+processing actually carried out**.
+
+🔴 **That settles who answers, not whether the processing is compliant.** It
+also does not make this repository a privacy policy — it still is not one.
+
+**→ [`docs/privacy/`](docs/privacy/README.md)** — technical documentation
+**V0.1**, bilingual: categories and flows, erasure and retention,
+recipients, and the limitations that remain open.
+
+---
+
 ## What travels where
 | Path | What the reviewed implementation shows | Boundary |
 |---|---|---|

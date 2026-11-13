@@ -28,12 +28,20 @@
 |---|---|---|
 | **Infomaniak** | hosting of the service and its databases; outbound email; inference service used by the semantic-risk channel | 🇨🇭 Switzerland |
 
-A data-processing agreement exists with this provider.
+A data-processing agreement exists with this provider, concluded
+electronically on **13 November 2026**, in which the client is named as
+controller and Infomaniak Network SA as processor.
 
-⚠ **One reservation, stated rather than hidden.** The agreement is signed
-under a denomination whose relationship to the other NeoMundi entities is
-not established by any document we hold. The question is open and is being
-resolved. See [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §3.
+⚠ **One reservation, stated rather than hidden.** That agreement names the
+client by a **trading-style denomination that is not a declared legal
+entity**, and carries **no legal identifier** — no registration number, no
+legal form. The address on it is that of NeoMundi Recherche.
+
+🔴 **We do not conclude from this that the agreement is void** — that is a
+legal assessment, and we have not obtained one. We conclude that the
+contractual denomination and the designated controller **are not yet
+aligned**, and a rectification has been prepared with the provider. See
+[`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §3.
 
 ## 3. Category B — providers **you** choose
 

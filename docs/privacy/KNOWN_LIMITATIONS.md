@@ -48,31 +48,42 @@ evidence of absence, and we will not present it as such.
 
 **What would close this:** running those two read-only checks.
 
-## 3. No designated data controller
+## 3. The controller is settled; the contract is not yet aligned
 
-🔴 **No legal entity is named as data controller anywhere in this
-documentation**, because the decision is open.
+✅ **Settled on 13 November 2026.** The controller is **NeoMundi Recherche**,
+association governed by the French law of 1 July 1901, RNA `W563015824` —
+see [`README.md`](README.md). Earlier versions of this page recorded the
+question as open; it is not.
 
-Three denominations appear across NeoMundi's documents. Which one carries
-the measurement service, and which one signed the hosting agreement, are two
-questions that are **not** settled by anything we hold. Naming an entity
-before they are settled would be worse than naming none.
+🔴 **What is still open is narrower, and contractual.** The hosting
+agreement with Infomaniak was concluded under a **trading-style denomination
+that is not a declared legal entity**, and carries **no legal identifier**.
+The address on it is that of NeoMundi Recherche.
 
-**What this costs:** these pages **cannot** serve as the information notice
-a controller owes to the people whose data it processes. They describe
-technical reality. **A privacy policy remains to be written**, and it
-depends on this decision, not on more engineering.
+**We do not call that agreement void.** That would be a legal conclusion,
+and we have not obtained one. What we state is narrower: the contractual
+denomination and the designated controller are **not yet aligned**.
 
-**What would close this:** a documented decision, taken with legal advice.
+⚠ **A second limitation follows, and it is the one that matters to a
+reader.** Naming a controller does not make these pages an information
+notice under Articles 13 and 14 of the GDPR. **A privacy policy remains to
+be written** — and that is now a legal drafting task, no longer a blocked
+decision.
+
+**What would close this:** a rectification or an amendment from the
+provider naming NeoMundi Recherche, and a privacy notice drafted with legal
+advice.
 
 ## 4. No accounting retention period
 
 Accounting records are retained. **For how long is not decided**, and this
 documentation will not invent a duration.
 
-The question is not purely legal: the entity issuing the invoices and the
-entity publishing the measurement service are **not the same denomination**,
-and they are not under the same law.
+⚠ Historical invoices were issued under a denomination that is **not** the
+designated controller. Those documents are **not rewritten** — an issued
+accounting record is not edited after the fact. They are a historical
+record, and they confer no current responsibility on the entity that
+appears on them.
 
 **What would close this:** a documented decision naming both the duration
 and the entity that carries it.

@@ -28,13 +28,21 @@
 |---|---|---|
 | **Infomaniak** | hébergement du service et de ses bases ; messagerie sortante ; service d'inférence utilisé par le canal de risque sémantique | 🇨🇭 Suisse |
 
-Un accord de sous-traitance existe avec ce fournisseur.
+Un accord de sous-traitance existe avec ce fournisseur, conclu par voie
+électronique le **13 novembre 2026**, dans lequel le client est désigné
+responsable de traitement et Infomaniak Network SA sous-traitant.
 
-⚠ **Une réserve, énoncée plutôt que masquée.** L'accord est signé sous une
-dénomination dont le rapport aux autres entités NeoMundi n'est établi par
-aucun document en notre possession. La question est ouverte, et en cours de
-régularisation. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md)
-§3.
+⚠ **Une réserve, énoncée plutôt que masquée.** Cet accord nomme le client
+par une **dénomination d'usage qui n'est pas une entité juridique
+déclarée**, et ne porte **aucun identifiant légal** — ni numéro
+d'enregistrement, ni forme juridique. L'adresse qui y figure est celle de
+NeoMundi Recherche.
+
+🔴 **Nous n'en concluons pas que l'accord serait nul** — c'est une
+appréciation juridique, et nous ne l'avons pas obtenue. Nous en concluons
+que la dénomination contractuelle et le responsable désigné **ne sont pas
+encore alignés**, et une demande de rectification a été préparée auprès du
+fournisseur. Voir [`KNOWN_LIMITATIONS_FR.md`](KNOWN_LIMITATIONS_FR.md) §3.
 
 ## 3. Catégorie B — les fournisseurs que **vous** choisissez
 

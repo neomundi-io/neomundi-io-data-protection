@@ -51,33 +51,44 @@ preuve d'absence, et nous ne le présenterons pas comme telle.
 **Ce qui lèverait cette limite :** exécuter ces deux contrôles en lecture
 seule.
 
-## 3. Aucun responsable de traitement désigné
+## 3. Le responsable est arrêté ; le contrat ne l'est pas encore
 
-🔴 **Aucune entité juridique n'est désignée responsable de traitement dans
-cette documentation**, parce que la décision est ouverte.
+✅ **Tranché le 13 novembre 2026.** Le responsable de traitement est
+**NeoMundi Recherche**, association régie par la loi du 1er juillet 1901,
+RNA `W563015824` — voir [`README_FR.md`](README_FR.md). Les versions
+antérieures de cette page consignaient la question comme ouverte ; elle ne
+l'est plus.
 
-Trois dénominations apparaissent dans les documents de NeoMundi. Laquelle
-porte le service de mesure, et laquelle a signé l'accord d'hébergement, sont
-deux questions que rien de ce que nous détenons ne tranche. Nommer une
-entité avant qu'elles soient réglées serait pire que n'en nommer aucune.
+🔴 **Ce qui reste ouvert est plus étroit, et contractuel.** L'accord
+d'hébergement conclu avec Infomaniak l'a été sous une **dénomination d'usage
+qui n'est pas une entité juridique déclarée**, et ne porte **aucun
+identifiant légal**. L'adresse qui y figure est celle de NeoMundi Recherche.
 
-**Ce que cela coûte :** ces pages **ne peuvent pas** tenir lieu d'information
-due par un responsable de traitement aux personnes dont il traite les
-données. Elles décrivent une réalité technique. **Une politique de
-confidentialité reste à écrire**, et elle dépend de cette décision, pas de
-travaux d'ingénierie supplémentaires.
+**Nous ne qualifions pas cet accord de nul.** Ce serait une conclusion
+juridique, et nous ne l'avons pas obtenue. Ce que nous énonçons est plus
+étroit : la dénomination contractuelle et le responsable désigné **ne sont
+pas encore alignés**.
 
-**Ce qui lèverait cette limite :** une décision documentée, prise avec un
-conseil juridique.
+⚠ **Une seconde limite en découle, et c'est celle qui compte pour un
+lecteur.** Désigner un responsable ne fait pas de ces pages l'information
+due au titre des articles 13 et 14 du RGPD. **Une politique de
+confidentialité reste à écrire** — c'est désormais un travail de rédaction
+juridique, non plus une décision bloquée.
+
+**Ce qui lèverait cette limite :** une rectification ou un avenant du
+fournisseur désignant NeoMundi Recherche, et une notice d'information
+rédigée avec un conseil juridique.
 
 ## 4. Aucune durée de conservation comptable
 
 Les pièces comptables sont conservées. **Pour combien de temps n'est pas
 décidé**, et cette documentation n'inventera pas de durée.
 
-La question n'est pas purement juridique : l'entité qui émet les factures et
-l'entité qui publie le service de mesure **ne sont pas la même
-dénomination**, et ne relèvent pas du même droit.
+⚠ Les factures historiques ont été émises sous une dénomination qui **n'est
+pas** le responsable désigné. Ces documents **ne sont pas réécrits** — une
+pièce comptable émise ne se retouche pas après coup. Ils constituent une
+trace historique, et ils ne confèrent aucune responsabilité actuelle à
+l'entité qui y figure.
 
 **Ce qui lèverait cette limite :** une décision documentée nommant à la fois
 la durée et l'entité qui la porte.

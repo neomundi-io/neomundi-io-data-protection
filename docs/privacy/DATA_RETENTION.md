@@ -6,12 +6,12 @@
 
 </div>
 
-> **V0.2 · 13 November 2026 · provisional.**
+> **V0.3 · 13 November 2026 · provisional.**
 >
-> 🔴 **Everything in sections 2 to 5 is merged, not deployed.** It was
-> merged into the production lineage on 13 November 2026 at commit
-> `1a64aeaf`; no deployment was triggered. **The running service does not
-> behave this way yet.**
+> 🟢 **Everything in sections 2 to 5 is DEPLOYED.** Production serves
+> revision `fc5fadd9d212…` since 13 November 2026, verified on the running
+> containers. Versions 0.1 and 0.2 of this page said otherwise, and said so
+> deliberately — the behaviour was then merged but not live.
 
 ---
 
@@ -104,7 +104,7 @@ A mechanical fallback used to copy the **first three sentences of the
 response** whenever the evaluator had designated nothing. On 927 real
 responses, that fallback produced **69.6%** of all stored excerpts. **It has
 been removed.** The opening of an answer is not a suspicious passage; it is
-just its opening. *Merged, not deployed.*
+just its opening. *Deployed and verified on 13 November 2026.*
 
 🔴 **Excerpts already stored have not been altered.** Removing them is a
 separate decision, not taken here, and a naive deletion would destroy the

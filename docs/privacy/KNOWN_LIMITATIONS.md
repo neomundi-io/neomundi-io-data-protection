@@ -6,25 +6,37 @@
 
 </div>
 
-> **V0.2 · 13 November 2026 · provisional.**
+> **V0.3 · 13 November 2026 · provisional.**
 >
 > This page exists because a documentation that lists only what works is a
 > sales page. Everything below is open.
 
 ---
 
-## 1. Merged is not deployed — the limitation that governs all the others
+## 1. 🟢 Deployed — the limitation that governed all the others is closed
 
-The erasure behaviour described in
-[`DATA_RETENTION.md`](DATA_RETENTION.md) was merged on 13 November 2026 into
-the production lineage branch. **It has not been deployed.**
+Versions 0.1 and 0.2 opened this page with the warning that the erasure
+behaviour was merged but **not deployed**, and that the running service
+still destroyed invoices on an account deletion.
 
-🔴 **The running service still behaves as before**: an account deletion
-cascades, and that cascade destroys invoices. Everything we describe as
-verified is verified **on the merged candidate**, not in production.
+**That is no longer the case.** Production serves revision `fc5fadd9d212…`
+since 13 November 2026, verified on the running containers: the egress
+guard refuses `openai`, the excerpt fallback returns an empty list, the
+second on-disk copy is disabled, and invoice issuance refuses to run while
+no issuer is decided.
 
-**What would close this:** a deployment, which requires an explicit
-authorisation and the checks in §2.
+⚠ **Two things this does NOT close**, and they are the subject of §3 and
+§4: the invoice issuer is still undecided — which is precisely why issuance
+now refuses rather than producing an incomplete document — and no
+accounting retention period is set.
+
+⚠ **And one statement that is still live and still wrong**: the service
+terms served by the portal name an entity that no longer operates the
+service. They were deliberately left untouched, because their text is
+served from memory with no archive while each account records the version
+it accepted — editing version 1.0 in place would destroy every existing
+proof of consent. Issuing a corrected version is a legal drafting task, not
+a deployment.
 
 ## 2. External transfers — measured, and one is confirmed
 

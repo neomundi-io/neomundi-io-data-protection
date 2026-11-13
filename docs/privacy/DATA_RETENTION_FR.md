@@ -6,12 +6,13 @@
 
 </div>
 
-> **V0.2 · 13 novembre 2026 · provisoire.**
+> **V0.3 · 13 novembre 2026 · provisoire.**
 >
-> 🔴 **Tout ce qui figure aux sections 2 à 5 est fusionné, non déployé.**
-> La fusion dans la lignée de production date du 13 novembre 2026, au commit
-> `1a64aeaf` ; aucun déploiement n'a été déclenché. **Le service en
-> fonctionnement ne se comporte pas encore ainsi.**
+> 🟢 **Tout ce qui figure aux sections 2 à 5 est DÉPLOYÉ.** La production
+> sert la révision `fc5fadd9d212…` depuis le 13 novembre 2026, vérifiée sur
+> les conteneurs en service. Les versions 0.1 et 0.2 de cette page disaient
+> le contraire, et le disaient à dessein : le comportement était alors
+> fusionné mais pas en service.
 
 ---
 
@@ -108,7 +109,7 @@ Un repli mécanique recopiait les **trois premières phrases de la réponse**
 dès que l'évaluateur n'avait rien désigné. Sur 927 réponses réelles, ce
 repli produisait **69,6 %** de tous les extraits conservés. **Il a été
 retiré.** L'ouverture d'une réponse n'est pas un passage suspect : c'est
-juste son ouverture. *Fusionné, non déployé.*
+juste son ouverture. *Déployé et vérifié le 13 novembre 2026.*
 
 🔴 **Les extraits déjà conservés n'ont pas été modifiés.** Les traiter est
 une décision distincte, non prise ici, et un effacement naïf détruirait la

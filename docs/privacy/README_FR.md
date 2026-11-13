@@ -2,7 +2,7 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
-# Protection des données — documentation technique **V0.2**
+# Protection des données — documentation technique **V0.3**
 
 ### Ce que nous avons vérifié, comment, et ce que nous n'avons pas vérifié.
 
@@ -37,9 +37,9 @@ Trois choses, toutes des mesures plutôt que des reformulations :
    Corrigé au §3.3 de
    [`DATA_PROCESSING_FR.md`](DATA_PROCESSING_FR.md).
 
-⚠ **Ce qui n'a PAS changé :** le comportement d'effacement reste
-**fusionné et non déployé**, et nous l'avons vérifié directement — la
-production sert la révision antérieure.
+🟢 **Et en version 0.3, la seule chose qui n'avait pas changé, a changé.**
+Le comportement d'effacement est **déployé**. La production sert la révision
+`fc5fadd9d212…`, vérifiée sur les conteneurs en service — voir ci-dessous.
 
 ## Pourquoi cette documentation existe
 
@@ -82,21 +82,28 @@ substantiel.
 | La différence entre appels initiés par NeoMundi et par l'utilisateur | La Station, Evidence, les sites publics |
 | Ce que le code garantit, et ce qu'il ne peut pas garantir | La licéité des traitements — désigner un responsable n'est pas une appréciation |
 
-## 🔴 À lire avant tout le reste : fusionné n'est pas déployé
+## 🟢 Déployé le 13 novembre 2026 — et vérifié sur le service en fonctionnement
 
-Le comportement d'effacement décrit dans
-[`DATA_RETENTION_FR.md`](DATA_RETENTION_FR.md) a été fusionné le
-**13 novembre 2026** dans la branche de la lignée de production, au commit
-[`1a64aeaf`](https://github.com/neomundi-io/Backend_plateforme_v2/commit/1a64aeaff073f633f06795d61cb8e8424b90299c)
-*(dépôt privé)*.
+Les versions 0.1 et 0.2 de cette page disaient le comportement d'effacement
+*fusionné, non déployé*, et prévenaient le lecteur de ne pas supposer que le
+meilleur comportement était en service. **Il l'est désormais.**
 
-**Il n'a pas été déployé.** Aucun workflow de publication d'image n'écoute
-cette branche, et aucun ne s'est déclenché. **Le service en fonctionnement
-ne se comporte pas encore ainsi.**
+| | |
+|---|---|
+| **Révision servie** | `fc5fadd9d21251712ed34a13c23803dfccc37123` |
+| Services | le moteur de mesure et le portail |
+| Vérifié | sur les conteneurs en service, non déduit d'une branche |
+| Inchangé | le frontend web, délibérément — cette livraison n'y touche pas |
 
-Chaque affirmation sur l'effacement porte donc la mention **fusionné, non
-déployé**. Nous préférons publier cette distinction plutôt que laisser un
-lecteur supposer que le meilleur comportement est déjà en service.
+**Ce qui a été vérifié sur le service en fonctionnement**, et non sur un
+candidat :
+
+- le garde de sortie externe est actif, et refuse `openai` — `provider_not_allowed`, même présenté avec un identifiant bien formé ;
+- le repli mécanique d'extraits rend une liste vide à tous les scores ;
+- la seconde copie sur disque des sorties client est désactivée ;
+- l'état de compte purgé existe, et l'émission de facture refuse de s'exécuter tant qu'aucun émetteur n'est arrêté ;
+- `measurement_version` vaut **3.5.0**, inchangée — les résultats restent comparables à tout ce qui a été mesuré avant ;
+- le corpus, les factures, les portefeuilles, les comptes et les clés d'API sont intacts, à la ligne près.
 
 ## Ce qui est réellement vérifié
 
@@ -164,6 +171,6 @@ votre contrat ou de l'interface.
 
 ---
 
-<sub>V0.2 · 13 novembre 2026 · Apache-2.0. Les descriptions antérieures
+<sub>V0.3 · 13 novembre 2026 · Apache-2.0. Les descriptions antérieures
 demeurent dans l'historique Git et ne constituent pas des engagements
 actuels.</sub>

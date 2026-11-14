@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 November 2026 · provisional.** Read
+> **V0.5 · 14 November 2026 · provisional.** Read
 > [`README.md`](README.md) first — in particular the distinction between
 > **merged** and **deployed**.
 
@@ -66,10 +66,16 @@ infrastructure we control; some do not.
 | Channel | Where it runs | Content leaves? |
 |---|---|---|
 | Stability | our servers | no |
-| Coherence | model on our own servers | no |
+| Coherence | 🔴 **our host's inference service** — version 0.4 of this page said "model on our own servers" and "no"; the deployed configuration says otherwise | **yes — to our host** |
 | Semantic risk | our host's inference service | yes — to our host |
 | Factuality / instability | our host's inference service | yes — to our host |
 | **Document grounding** *(optional)* | **providers outside Switzerland and the EU** | **yes** |
+
+⚠ **Where each evaluator actually runs, re-read on 14 November 2026.** Three
+of the four channels above are served by our host's inference service, and the
+local inference container declared in our deployment file has been **stopped
+since 9 November 2026**. We publish this because a reader cannot verify it, and
+because version 0.4 of this page got the coherence row wrong.
 
 **A guard now governs these calls.** It combines an explicit allow-list with
 a credential plausibility check, and it is applied to **four** egress paths.
@@ -118,8 +124,10 @@ configuration, and the default is not what runs.
 | **Semantic risk** | 🔴 **our host's AI service** — `api.infomaniak.com` |
 | Factuality | 🔴 **our host's AI service** — `api.infomaniak.com`. Version 0.2 of this page said this channel was unavailable, on the strength of a supervision probe that was wrong |
 
-🔴 **So two of the three leave the machine**, toward the one provider we do
-have an agreement with. The destination is a **configuration variable**, not
+🔴 **So all three leave the machine**, toward the one provider we do
+have an agreement with. Versions 0.2 to 0.4 of this page said *"two of the
+three"*, because they counted the factuality channel as unavailable. It is
+not. The destination is a **configuration variable**, not
 a code constant: the guard in §3.1 protects against sending to **named
 providers**, not against **arbitrary destinations**.
 

@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 novembre 2026 · provisoire.**
+> **V0.5 · 14 novembre 2026 · provisoire.**
 >
 > Cette page existe parce qu'une documentation qui n'énumère que ce qui
 > fonctionne est une page commerciale. Tout ce qui suit est ouvert.

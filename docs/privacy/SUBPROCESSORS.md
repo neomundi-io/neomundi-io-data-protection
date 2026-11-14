@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 November 2026 · provisional.**
+> **V0.5 · 14 November 2026 · provisional.**
 >
 > 🔴 **This page lists only what is established.** A provider that *could*
 > be configured is not a provider that *is* receiving data, and we do not

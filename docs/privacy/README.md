@@ -2,7 +2,7 @@
 
 <sub><b>English</b> · <a href="README_FR.md">Français</a></sub>
 
-# Data protection — technical documentation **V0.4**
+# Data protection — technical documentation **V0.5**
 
 ### What we verified, how we verified it, and what we did not.
 
@@ -165,5 +165,5 @@ contract or in the service interface.
 
 ---
 
-<sub>V0.4 · 14 November 2026 · Apache-2.0. Earlier descriptions remain in Git
+<sub>V0.5 · 14 November 2026 · Apache-2.0. Earlier descriptions remain in Git
 history and are not current commitments.</sub>

@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 November 2026 · provisional.**
+> **V0.5 · 14 November 2026 · provisional.**
 >
 > This page exists because a documentation that lists only what works is a
 > sales page. Everything below is open.

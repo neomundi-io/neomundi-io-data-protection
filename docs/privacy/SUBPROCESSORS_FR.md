@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 novembre 2026 · provisoire.**
+> **V0.5 · 14 novembre 2026 · provisoire.**
 >
 > 🔴 **Cette page ne liste que ce qui est établi.** Un fournisseur qui
 > *pourrait* être configuré n'est pas un fournisseur qui *reçoit* des

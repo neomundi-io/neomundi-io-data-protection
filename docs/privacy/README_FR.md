@@ -2,7 +2,7 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
-# Protection des données — documentation technique **V0.4**
+# Protection des données — documentation technique **V0.5**
 
 ### Ce que nous avons vérifié, comment, et ce que nous n'avons pas vérifié.
 
@@ -171,6 +171,6 @@ votre contrat ou de l'interface.
 
 ---
 
-<sub>V0.4 · 14 novembre 2026 · Apache-2.0. Les descriptions antérieures
+<sub>V0.5 · 14 novembre 2026 · Apache-2.0. Les descriptions antérieures
 demeurent dans l'historique Git et ne constituent pas des engagements
 actuels.</sub>

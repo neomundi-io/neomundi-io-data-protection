@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.4 · 14 novembre 2026 · provisoire.** Lisez d'abord
+> **V0.5 · 14 novembre 2026 · provisoire.** Lisez d'abord
 > [`README_FR.md`](README_FR.md), en particulier la distinction entre
 > **fusionné** et **déployé**.
 
@@ -69,10 +69,17 @@ sur une infrastructure que nous contrôlons ; d'autres non.
 | Canal | Où il s'exécute | Le contenu sort-il ? |
 |---|---|---|
 | Stabilité | nos serveurs | non |
-| Cohérence | modèle sur nos propres serveurs | non |
+| Cohérence | 🔴 **le service d'inférence de notre hébergeur** — la version 0.4 de cette page disait « modèle sur nos propres serveurs » et « non » ; la configuration déployée dit le contraire | **oui — vers notre hébergeur** |
 | Risque sémantique | service d'inférence de notre hébergeur | oui — vers notre hébergeur |
 | Factualité / instabilité | service d'inférence de notre hébergeur | oui — vers notre hébergeur |
 | **Ancrage documentaire** *(optionnel)* | **prestataires hors de Suisse et hors de l'Union européenne** | **oui** |
+
+⚠ **Où chaque évaluateur s'exécute réellement, revérifié le 14 novembre
+2026.** Trois des quatre canaux ci-dessus sont servis par le service
+d'inférence de notre hébergeur, et le conteneur d'inférence locale déclaré
+dans notre fichier de déploiement est **arrêté depuis le 9 novembre 2026**.
+Nous le publions parce qu'un lecteur ne peut pas le vérifier, et parce que la
+version 0.4 de cette page se trompait sur la ligne de cohérence.
 
 **Un garde encadre désormais ces appels.** Il combine une liste blanche
 explicite et un contrôle de plausibilité de l'identifiant, et il s'applique
@@ -123,8 +130,10 @@ configuration déployée, et le défaut n'est pas ce qui tourne.
 | **Risque sémantique** | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com` |
 | Factualité | 🔴 **le service d'inférence de notre hébergeur** — `api.infomaniak.com`. La version 0.2 de cette page disait ce canal indisponible, sur la foi d'une sonde de supervision qui était fausse |
 
-🔴 **Deux des trois sortent donc de la machine**, vers le seul fournisseur
-avec lequel nous avons un accord. La destination est une **variable de
+🔴 **Les trois sortent donc de la machine**, vers le seul fournisseur
+avec lequel nous avons un accord. Les versions 0.2 à 0.4 de cette page
+disaient « deux des trois », parce qu'elles comptaient le canal de factualité
+comme indisponible. Il ne l'est pas. La destination est une **variable de
 configuration**, pas une constante de code : le garde du §3.1 protège contre
 les envois vers des **fournisseurs nommés**, pas contre des **destinations
 arbitraires**.

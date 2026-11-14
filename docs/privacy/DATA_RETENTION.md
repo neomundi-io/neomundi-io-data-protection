@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.3 · 13 November 2026 · provisional.**
+> **V0.4 · 14 November 2026 · provisional.**
 >
 > 🟢 **Everything in sections 2 to 5 is DEPLOYED.** Production serves
 > revision `fc5fadd9d212…` since 13 November 2026, verified on the running

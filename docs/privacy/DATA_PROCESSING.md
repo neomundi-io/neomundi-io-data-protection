@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.2 · 13 November 2026 · provisional.** Read
+> **V0.4 · 14 November 2026 · provisional.** Read
 > [`README.md`](README.md) first — in particular the distinction between
 > **merged** and **deployed**.
 
@@ -31,7 +31,8 @@ bounded to **10 excerpts of at most 200 characters**.
 excerpts**, and that **69.6%** of those excerpts came from a mechanical
 fallback that copied the first three sentences of the response whenever the
 evaluator had designated nothing. **That fallback has been removed** — see
-[`DATA_RETENTION.md`](DATA_RETENTION.md) §4. **Merged, not deployed.**
+[`DATA_RETENTION.md`](DATA_RETENTION.md) §4. **Deployed on 13 November
+2026** — the field now returns an empty list at every score.
 
 ## 2. Purposes
 
@@ -39,9 +40,15 @@ evaluator had designated nothing. **That fallback has been removed** — see
 |---|---|
 | Operating the measurement service | submitted content, account data |
 | Authentication and quota enforcement | credentials, account data |
-| Billing | account data, accounting records |
+| Keeping pre-existing accounting records | account data, accounting records |
 | **Scientific qualification of the measurements** | measurement results |
 | Security and abuse investigation | technical logs |
+
+⚠ **No invoicing is currently carried out.** The purpose above is the
+*retention* of accounting records issued earlier, not an active billing
+activity: since 13 November 2026 the running service **refuses** to issue an
+invoice while no issuer is settled, rather than emitting an incomplete
+accounting document.
 
 The scientific purpose is the reason measurement results are **not** deleted
 with an account. See [`DATA_RETENTION.md`](DATA_RETENTION.md) §3.
@@ -61,7 +68,7 @@ infrastructure we control; some do not.
 | Stability | our servers | no |
 | Coherence | model on our own servers | no |
 | Semantic risk | our host's inference service | yes — to our host |
-| Factuality / instability | inference service | **channel unavailable at the time of writing** |
+| Factuality / instability | our host's inference service | yes — to our host |
 | **Document grounding** *(optional)* | **providers outside Switzerland and the EU** | **yes** |
 
 **A guard now governs these calls.** It combines an explicit allow-list with
@@ -71,7 +78,10 @@ a credential plausibility check, and it is applied to **four** egress paths.
 ⚠ The fourth path — the demonstration endpoint — was not found by reading
 the code. It was found by a **structural test** that parses the source and
 flags any place where the mere presence of a credential is treated as
-permission to send. *Merged, not deployed.*
+permission to send. **Deployed on 13 November 2026**, and verified on the
+running service: presented with a well-formed `openai` credential, it
+refuses, reason `provider_not_allowed`. The allow-list actually served is
+`['cohere']`.
 
 ### 3.2 Calls **you** initiate, with **your** credentials
 
@@ -106,7 +116,7 @@ configuration, and the default is not what runs.
 |---|---|
 | **Coherence / embeddings** | 🔴 **our host's AI service** — `api.infomaniak.com` |
 | **Semantic risk** | 🔴 **our host's AI service** — `api.infomaniak.com` |
-| Factuality | an internal address — with **no engine behind it**, so the channel is **unavailable** |
+| Factuality | 🔴 **our host's AI service** — `api.infomaniak.com`. Version 0.2 of this page said this channel was unavailable, on the strength of a supervision probe that was wrong |
 
 🔴 **So two of the three leave the machine**, toward the one provider we do
 have an agreement with. The destination is a **configuration variable**, not

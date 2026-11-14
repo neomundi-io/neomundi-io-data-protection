@@ -6,7 +6,7 @@
 
 </div>
 
-> **V0.3 · 13 novembre 2026 · provisoire.**
+> **V0.4 · 14 novembre 2026 · provisoire.**
 >
 > Cette page existe parce qu'une documentation qui n'énumère que ce qui
 > fonctionne est une page commerciale. Tout ce qui suit est ouvert.
@@ -55,7 +55,7 @@ les deux fournisseurs donnent des réponses **différentes**.
 | Mesures portant un résultat d'ancrage | **760** |
 | Modèle qui les a produites | **`command-a-03-2025`** — un modèle Cohere, sur les 760 |
 | Fenêtre | **10 juillet → 4 novembre 2026** |
-| Clients distincts | **4** |
+| Comptes pilotes distincts | **4** |
 
 🔴 **Pour qu'un résultat existe, le contenu a dû être transmis.** C'est un
 fait, pas une déduction. Le canal est **déclaré** au §3.1 de

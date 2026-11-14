@@ -2,7 +2,7 @@
 
 <sub><b>English</b> · <a href="README_FR.md">Français</a></sub>
 
-# Data protection — technical documentation **V0.3**
+# Data protection — technical documentation **V0.4**
 
 ### What we verified, how we verified it, and what we did not.
 
@@ -26,7 +26,7 @@ Three things, all of them measurements rather than rewording:
 1. 🟢 **The controller is settled** — NeoMundi Recherche, named above.
    Version 0.1 recorded that question as open.
 2. 🔴 **The transfer checks were carried out.** One transfer is now
-   **confirmed** (Cohere, 760 measurements, 4 customers); for the other
+   **confirmed** (Cohere, 760 measurements, 4 pilot accounts); for the other
    provider, no stored result exists over 340,602 measurements. See
    [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md) §2.
 3. 🔴 **Two evaluator channels are not internal**, as version 0.1
@@ -165,5 +165,5 @@ contract or in the service interface.
 
 ---
 
-<sub>V0.3 · 13 November 2026 · Apache-2.0. Earlier descriptions remain in Git
+<sub>V0.4 · 14 November 2026 · Apache-2.0. Earlier descriptions remain in Git
 history and are not current commitments.</sub>

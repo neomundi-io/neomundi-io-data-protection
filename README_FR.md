@@ -12,7 +12,7 @@
 
 [![Measurement](https://img.shields.io/badge/Measurement-Mesurer-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md)
 [![Station](https://img.shields.io/badge/Station-Observer-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md)
-[![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-public/blob/main/README.fr.md)
+[![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-gateway/blob/main/README.fr.md)
 [![Use cases](https://img.shields.io/badge/Cas_d_usage-Explorer-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
 
 **[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Créer un compte](https://controltower.neomundi.io/welcome)**
